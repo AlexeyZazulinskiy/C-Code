@@ -35,9 +35,9 @@ int main (void) {
 
     n4 = tmp%10;
 
-    float avr = ((float)n1+n2+n3+n4)/4;
+    float avrage = ((float)n1+n2+n3+n4)/4;
 
-    printf ("%.2f \n",avr);
+    printf ("%.2f \n",avrage);
 
     return 0;
 }
