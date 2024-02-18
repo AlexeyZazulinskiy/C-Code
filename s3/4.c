@@ -13,19 +13,22 @@
 Данные на выходе: winter
 */
 
-int main () {
+int main()
+{
     int a;
-    char sWinter[] = "Winter";
-    char sSping[] = "Spring";
-    char sSummer[] = "Summer";
-    char sAutumn[] = "Autumn";
 
     scanf("%d", &a);
-    if (a > 12 || a < 1) printf ("Error");
-    else if (3 >= a || a == 12) printf ("%s", sWinter);
-    else if (5 >= a && a >= 3) printf ("%s", sSping);
-    else if (8 >= a && a >= 6) printf ("%s", sSummer);
-    else printf ("%s", sAutumn);
-        
+
+    if (a > 12 || a < 1)
+        printf("Error");
+    else if (3 >= a || a == 12)
+        printf("Winter");
+    else if (5 >= a && a >= 3)
+        printf("Spring");
+    else if (8 >= a && a >= 6)
+        printf("Summer");
+    else
+        printf("Autumn");
+
     return 0;
 }
