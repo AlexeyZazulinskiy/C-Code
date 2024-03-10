@@ -18,10 +18,16 @@ int acounter(void)
 Данные на выходе: 0
 */
 
+int acounter(void);
+
 int main(void){
 
-    scanf("", );
 
-    printf("%d", );
     return 0;
+}
+
+int acounter(void){
+
+ 
+    return n; 
 }

@@ -14,10 +14,27 @@
 Данные на выходе: 2 3 4 5 6 7
 */
 
+void recursion (int, int);
+
 int main(void){
 
-    scanf("", );
+    int a, b;
+    scanf("%d%d", &a, &b);
+    recursion(a, b);
 
-    printf("%d", );
     return 0;
+}
+
+void recursion (int n1, int n2){
+
+    int num;
+    if (n1 > n2) num = -1;
+    else num = 1;
+    printf ("%d ", n1);
+
+    if (n1 != n2) { 
+        recursion(n1 + num, n2);  
+    } 
+     
+    
 }

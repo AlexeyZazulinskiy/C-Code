@@ -14,9 +14,10 @@
 */
 
 int main(void){
-
-    scanf("", );
-
-    printf("%d", );
+    int n;
+    while (scanf("%d", &n) != 0){
+        if (n % 2 > 0) printf("%d ", n);
+    }
     return 0;
 }
+

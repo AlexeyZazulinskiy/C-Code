@@ -14,22 +14,22 @@ void print_num(int num)
 Данные на входе: 54321
 Данные на выходе: 5 4 3 2 1
 */
-int recursion (int);
+void recursion (int);
 
 int main(void){
 
     int a;
     scanf("%d", &a);
+    recursion(a);
 
-    printf("%d", recursion(a));
     return 0;
 }
 
-int recursion (int n){
+void recursion (int n){
 
-    if (n == 1) { 
-        return 1; 
+    if (n >= 10) { 
+        recursion(n / 10); 
     } 
-    int res = 2 * re2(n - 1); 
-    return res; 
+printf ("%d ", n % 10);
+
 }

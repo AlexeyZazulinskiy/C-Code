@@ -14,10 +14,24 @@ int recurs_power(int n, int p)
 Данные на выходе: 81
 */
 
+int recurs_power(int n, int p);
+
 int main(void){
 
-    scanf("", );
+    int n = 3, p = 4;
+    //scanf("%d%d", &n, &p);
+   // printf ("%d/%d ", n, p);
+    printf("%d", recurs_power(n, p));
 
-    printf("%d", );
     return 0;
+}
+
+int recurs_power(int n, int p){
+
+    if (p <= 1) 
+        return n;
+    else 
+        return n * recurs_power(n, p - 1);
+    return n;
+
 }
