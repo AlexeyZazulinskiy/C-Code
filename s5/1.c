@@ -20,7 +20,7 @@ int recursion (int n){
     if (n == 1) { 
         return 1; 
     } 
-    int res = 2 * re2(n - 1); 
+    int res = 2 * recursion(n - 1); 
     return res; 
 }
 
