@@ -12,12 +12,23 @@
 Данные на входе: 12 13 173 28 19 0
 Данные на выходе: 13 173 19
 */
+void recursion (void);
 
 int main(void){
-    int n;
-    while (scanf("%d", &n) != 0){
-        if (n % 2 > 0) printf("%d ", n);
-    }
+    recursion();
     return 0;
+}
+
+void recursion (){
+    int n;
+    scanf("%d", &n);
+    if (n > 0){
+        if (n % 2 > 0){
+            printf ("%d ", n);
+            recursion();
+        } else {
+            recursion();
+        }
+    } 
 }
 

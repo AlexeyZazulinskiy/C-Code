@@ -18,9 +18,9 @@ int recurs_power(int n, int p);
 
 int main(void){
 
-    int n = 3, p = 4;
-    //scanf("%d%d", &n, &p);
-   // printf ("%d/%d ", n, p);
+    int n, p;
+    scanf("%d%d", &n, &p);
+
     printf("%d", recurs_power(n, p));
 
     return 0;
