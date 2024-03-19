@@ -12,18 +12,38 @@
 Данные на входе: 1 2 3 4 5
 Данные на выходе: 3.000
 */
+#define ARRSIZE 5
 
-int nod (int a, int b){
-    
-
-    return a + b;
-}
+void EnterArray (int[], int);
+float Result (int[], int);
 
 int main(void){
 
-    int a, b;
-    scanf("%d%d", &a, &b);
+    int array[ARRSIZE];
+    printf ("Start \n");
 
-    printf("%d", nod(a,b));
+    EnterArray(array, ARRSIZE);
+    printf ("Result: %.3f", Result( array, ARRSIZE));
+
     return 0;
 }
+
+void EnterArray (int *array, int n){
+    
+    for (int i = 0; i < n; i++){
+        scanf ("%d", &array[i]);
+    }
+
+}
+
+float Result (int *array, int n){
+    
+    float sum = 0;
+
+    for (int i = 0; i < n; i++){
+        sum += array[i];
+    }
+
+    return sum/n;
+}
+

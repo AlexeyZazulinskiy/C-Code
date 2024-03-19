@@ -12,17 +12,54 @@
 Данные на выходе: 100 51 62 73 4 555 16 1007 118 109
 */
 
-int nod (int a, int b){
-    
+#define ARRSIZE 10
 
-    return a + b;
-}
+void EnterArray (int[], int);
+void Result (int[], int);
+void PrintArray (int[], int);
 
 int main(void){
 
-    int a, b;
-    scanf("%d%d", &a, &b);
-
-    printf("%d", nod(a,b));
+    int array[ARRSIZE];
+    printf ("Start \n");
+    EnterArray(array, ARRSIZE);
+    Result( array, ARRSIZE);
+    PrintArray(array, ARRSIZE);
     return 0;
+}
+
+void EnterArray (int *array, int n){
+    
+    for (int i = 0; i < n; i++){
+        scanf ("%d", &array[i]);
+    }
+    
+}
+
+void Result (int *array, int n){
+    int arrSort[n];
+    for (int i = 0; i < n; i++){
+        arrSort[i] = array[i]%10;  // отбрасываем первые цифры и записываем в новый массив
+    }
+    for (int i = 0; i < n; i++){
+        for (int j = 0; j < n - i - 1; j++){
+            if(arrSort[j] > arrSort[j+1]) {
+                                   //сортируем новый массив одновременно переставляя соответствующие элементы основного массива    
+              int tmp = arrSort[j];
+              arrSort[j] = arrSort[j+1];
+              arrSort[j+1] = tmp;
+
+              tmp = array[j];
+              array[j] = array[j+1];
+              array[j+1] = tmp;
+            }
+        }   
+    }
+}
+
+void PrintArray (int *array, int n){
+    printf ("Resilt: ");
+    for (int i = 0; i < n; i++){
+        printf ("%d ", array[i]);
+    }
 }

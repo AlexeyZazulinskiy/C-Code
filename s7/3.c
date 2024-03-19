@@ -12,18 +12,28 @@
 Данные на входе: 1 2 3 4 5 6 7 8 9 10 11 12
 Данные на выходе: 9 10 11 12 1 2 3 4 5 6 7 8
 */
-
-int nod (int a, int b){
-    
-
-    return a + b;
-}
+#define ARRSIZE 12
+                                    // НЕ РЕШЕНО
+void EnterArray (int[], int);
+float Result (int[], int);
 
 int main(void){
 
-    int a, b;
-    scanf("%d%d", &a, &b);
+    int array[ARRSIZE];
+    printf ("Start \n");
+    EnterArray(array, ARRSIZE);
+    return 0;
+}
 
-    printf("%d", nod(a,b));
+void EnterArray (int *array, int n){
+    
+    for (int i = 0; i < n; i++){
+        scanf ("%d", &array[i]);
+    }
+
+}
+
+float Result (int *array, int n){
+
     return 0;
 }

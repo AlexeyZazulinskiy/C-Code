@@ -12,17 +12,38 @@
 Данные на выходе: -5
 */
 
-int nod (int a, int b){
-    
+#define ARRSIZE 5
 
-    return a + b;
-}
+void EnterArray (int[], int);
+int MinArr (int[], int);
 
 int main(void){
 
-    int a, b;
-    scanf("%d%d", &a, &b);
+    int array[ARRSIZE];
+    printf ("Start \n");
 
-    printf("%d", nod(a,b));
+    EnterArray(array, ARRSIZE);
+    printf ("Minimum: %d", MinArr(array, ARRSIZE));
+
     return 0;
+}
+
+void EnterArray (int *array, int n){
+    
+    for (int i = 0; i < n; i++){
+        scanf ("%d", &array[i]);
+    }
+    
+}
+
+int MinArr (int *array, int n){
+
+    int res = array[0];
+
+    for (int i = 0; i < n; i++){
+        if (res > array[i])
+            res = array[i];
+    }
+
+    return res;
 }
