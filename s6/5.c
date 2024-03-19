@@ -17,7 +17,7 @@ int acounter(void)
 Данные на входе: Hello world.
 Данные на выходе: 0
 */
-
+                    // Не решено
 int acounter(void);
 
 int main(void){
