@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+#include <stdint.h>
+#include <inttypes.h>
 /*
 Написать рекурсивную функцию возведения целого числа n в степень p.
 int recurs_power(int n, int p)
@@ -14,19 +15,18 @@ int recurs_power(int n, int p)
 Данные на выходе: 81
 */
 
-int recurs_power(int n, int p);
+int64_t recurs_power(int64_t n, int p);
 
 int main(void){
-
     int n, p;
     scanf("%d%d", &n, &p);
 
-    printf("%d", recurs_power(n, p));
+    printf("%" PRIu64 "\n", recurs_power(n, p));
 
     return 0;
 }
 
-int recurs_power(int n, int p){
+  int64_t recurs_power(int64_t n, int p){
 
     if (p <= 1) 
         return n;
